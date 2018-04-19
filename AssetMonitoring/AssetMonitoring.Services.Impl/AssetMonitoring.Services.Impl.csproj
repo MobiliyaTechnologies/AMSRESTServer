@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1ABF0B51-FF52-46AD-B585-538505BE5A0A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AssetMonitoring.Services.Impl</RootNamespace>
+    <AssemblyName>AssetMonitoring.Services.Impl</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.0.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Windsor.4.0.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.8.2\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.8.2\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.8.2\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=8.1.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.8.1.4\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.8.2\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlertService.cs" />
+    <Compile Include="ApplicationConfigurationService.cs" />
+    <Compile Include="AssetService.cs" />
+    <Compile Include="BlobStorageService.cs" />
+    <Compile Include="GatewayService.cs" />
+    <Compile Include="GroupAlertService.cs" />
+    <Compile Include="IndoorLayoutService.cs" />
+    <Compile Include="Mappings\ApplicationConfigurationMapping.cs" />
+    <Compile Include="Mappings\CapabilityFilterMapping.cs" />
+    <Compile Include="Mappings\EnableSensorMapping.cs" />
+    <Compile Include="Mappings\GatewayMapping.cs" />
+    <Compile Include="Mappings\GroupRuleMapping.cs" />
+    <Compile Include="Mappings\GroupAssetMapping.cs" />
+    <Compile Include="Mappings\IndoorLayoutMapping.cs" />
+    <Compile Include="Mappings\IotHubGatewayMapping.cs" />
+    <Compile Include="Mappings\SensorCapabilityMapping.cs" />
+    <Compile Include="CapabilityService.cs" />
+    <Compile Include="Mappings\SensorGroupMapping.cs" />
+    <Compile Include="Mappings\SensorMapping.cs" />
+    <Compile Include="Mappings\SensorRuleMapping.cs" />
+    <Compile Include="Mappings\SensorTypeMapping.cs" />
+    <Compile Include="Mappings\UserMapping.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueueStorageService.cs" />
+    <Compile Include="SensorCapabilityFilterService.cs" />
+    <Compile Include="SensorGroupService.cs" />
+    <Compile Include="SensorRuleService.cs" />
+    <Compile Include="SensorService.cs" />
+    <Compile Include="SensorTypeService.cs" />
+    <Compile Include="ServiceInstaller.cs" />
+    <Compile Include="UserService.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AssetMonitoring.Components.Context\AssetMonitoring.Components.Context.csproj">
+      <Project>{6ca062cb-5b1b-440d-8de8-1fde5483c365}</Project>
+      <Name>AssetMonitoring.Components.Context</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AssetMonitoring.Components.Domain\AssetMonitoring.Components.Domain.csproj">
+      <Project>{c416d665-ae92-4895-bb27-18afdeddc237}</Project>
+      <Name>AssetMonitoring.Components.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AssetMonitoring.Components.Repository.DocumentDB\AssetMonitoring.Components.Repository.DocumentDB.csproj">
+      <Project>{9e2aa24d-29ed-4323-b81c-10b7ce5da745}</Project>
+      <Name>AssetMonitoring.Components.Repository.DocumentDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AssetMonitoring.Components.Repository\AssetMonitoring.Components.Repository.csproj">
+      <Project>{d9fb1c80-9223-4d44-b0e7-05df41c7ae32}</Project>
+      <Name>AssetMonitoring.Components.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AssetMonitoring.Contracts\AssetMonitoring.Contracts.csproj">
+      <Project>{348540fb-cc44-44e4-9cd9-8f514006ae48}</Project>
+      <Name>AssetMonitoring.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AssetMonitoring.Entities\AssetMonitoring.Entities.csproj">
+      <Project>{6c8283f6-d241-4c3a-be91-d6a0d7a226b0}</Project>
+      <Name>AssetMonitoring.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AssetMonitoring.IoTHub.Services\AssetMonitoring.IoTHub.Services.csproj">
+      <Project>{c1e2c940-b720-4e2e-96c3-699a309ece17}</Project>
+      <Name>AssetMonitoring.IoTHub.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AssetMonitoring.Services\AssetMonitoring.Services.csproj">
+      <Project>{64f51267-f7b3-402f-8f34-c075ad51724a}</Project>
+      <Name>AssetMonitoring.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AssetMonitoring.StreamAnalytics.Services\AssetMonitoring.StreamAnalytics.Services.csproj">
+      <Project>{664340e8-9033-488c-9ebe-43d991ef16f0}</Project>
+      <Name>AssetMonitoring.StreamAnalytics.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AssetMonitoring.Utilities\AssetMonitoring.Utilities.csproj">
+      <Project>{243ec77d-9280-4bc5-9cbe-c3d8af11e755}</Project>
+      <Name>AssetMonitoring.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

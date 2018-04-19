@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="0acb3738-6440-41cd-82eb-b47b61068256" ChangeDateTime="06/09/2017 09:59:37">
+    <Property Name="ElementName" Value="[dbo].[Sensors].[SensorIdentifier]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Sensors]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SensorKey" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b3a4ee77-51d6-41fb-8154-4cfaa9deeffd" ChangeDateTime="06/09/2017 10:00:09">
+    <Property Name="ElementName" Value="[dbo].[Gateways].[GatewayId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Gateways]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="GatewayKey" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ea62299e-4400-4dd4-b120-6d9f011a73e8" ChangeDateTime="06/09/2017 11:20:37">
+    <Property Name="ElementName" Value="[dbo].[SensorRules].[FilterValue]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[SensorRules]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Threshold" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6f190b32-1a84-43d3-a1d1-6e961d3f6956" ChangeDateTime="06/12/2017 05:54:50">
+    <Property Name="ElementName" Value="[dbo].[SensorRules].[Opertator]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[SensorRules]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Operator" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c9920609-fe3e-4d4f-b1f9-77ad46d6edd3" ChangeDateTime="06/12/2017 09:47:45">
+    <Property Name="ElementName" Value="[dbo].[SensorRules].[Threshold]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[SensorRules]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MinThreshold" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="293f9b10-0f73-4f36-b951-aa557a7d1b94" ChangeDateTime="06/26/2017 09:05:50">
+    <Property Name="ElementName" Value="[dbo].[Alerts].[AssetKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Alerts]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AssetBarcode" />
+  </Operation>
+</Operations>
