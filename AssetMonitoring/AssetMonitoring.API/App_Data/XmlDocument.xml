@@ -1,0 +1,1265 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AssetMonitoring.API</name>
+    </assembly>
+    <members>
+        <member name="P:AssetMonitoring.API.OpenIdConnectCachingSecurityTokenProvider.Issuer">
+            <summary>
+            Gets the issuer the credentials are for.
+            </summary>
+            <value>
+            The issuer the credentials are for.
+            </value>
+        </member>
+        <member name="P:AssetMonitoring.API.OpenIdConnectCachingSecurityTokenProvider.SecurityTokens">
+            <summary>
+            Gets all known security tokens.
+            </summary>
+            <value>
+            All known security tokens.
+            </value>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:AssetMonitoring.API.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:AssetMonitoring.API.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:AssetMonitoring.API.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:AssetMonitoring.API.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:AssetMonitoring.API.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:AssetMonitoring.API.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:AssetMonitoring.API.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:AssetMonitoring.API.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:AssetMonitoring.API.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:AssetMonitoring.API.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:AssetMonitoring.API.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:AssetMonitoring.API.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,AssetMonitoring.API.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,AssetMonitoring.API.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:AssetMonitoring.API.Areas.HelpPage.ObjectGenerator"/>) and other
+            factories in <see cref="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},AssetMonitoring.API.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey.#ctor(AssetMonitoring.API.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,AssetMonitoring.API.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:AssetMonitoring.API.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:AssetMonitoring.API.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:AssetMonitoring.API.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:AssetMonitoring.API.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:AssetMonitoring.API.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:AssetMonitoring.API.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:AssetMonitoring.API.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="T:AssetMonitoring.API.Controllers.AlertController">
+            <summary>
+            Provides group alert APIs.
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.AlertController.#ctor(AssetMonitoring.Services.IAlertService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Controllers.AlertController"/> class.
+            </summary>
+            <param name="alertService">The alert service.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.AlertController.GetAllAlertByGroup(System.Int32)">
+            <summary>
+            Gets all alert by group.
+            </summary>
+            <param name="groupId">The group identifier.</param>
+            <returns>The alert details.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.AlertController.GetPaginateAlert(AssetMonitoring.Contracts.AlertPaginationFilter)">
+            <summary>
+            Gets all paginating alert.
+            </summary>
+            <param name="alertPaginationFilter">The alert pagination filter.</param>
+            <returns>
+            The alert details.
+            </returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.AlertController.GetGroupAlertFilter">
+            <summary>
+            Gets the group alert filter.
+            </summary>
+            <returns>The group alert filter lists.</returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Controllers.ApplicationConfigurationController">
+            <summary>
+            Provides application configuration APIs.
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.ApplicationConfigurationController.#ctor(AssetMonitoring.Services.IBlobStorageService,AssetMonitoring.Services.IApplicationConfigurationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Controllers.ApplicationConfigurationController" /> class.
+            </summary>
+            <param name="blobStorageService">The BLOB storage service.</param>
+            <param name="applicationConfigurationService">The application configuration service.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.ApplicationConfigurationController.AddLogo">
+            <summary>
+            Adds the logo.
+            It receive only multipart/form-data content-type.
+            Application logo file with any name but must be image.
+            This API is accessible to only super admin user.
+            </summary>
+            <returns>The logo uploaded status.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.ApplicationConfigurationController.GetApplicationLogoUrl">
+            <summary>
+            Gets the application logo URL.
+            </summary>
+            <returns>The application logo URL.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.ApplicationConfigurationController.GetAllApplicationConfiguration">
+            <summary>
+            Gets all application configuration.
+            </summary>
+            <returns>The application configuration.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.ApplicationConfigurationController.GetApplicationConfiguration(System.String)">
+            <summary>
+            Gets the application configuration for given configuration type.
+            </summary>
+            <param name="applicationConfigurationType">Type of the application configuration.</param>
+            <returns>The application configuration if fount else a not found error response.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.ApplicationConfigurationController.Post(AssetMonitoring.Contracts.Configuration)">
+            <summary>
+            Adds the application configuration.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="configuration">The application configuration model.</param>
+            <returns>The created(201) on successfully creation else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.ApplicationConfigurationController.Delete(System.String)">
+            <summary>
+            Deletes the application configuration for given configuration type.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="applicationConfigurationType">Type of the application configuration.</param>
+            <returns>The deleted(204) on successfully deletion else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.ApplicationConfigurationController.Put(AssetMonitoring.Contracts.ApplicationConfigurationEntry)">
+            <summary>
+            Updates the application configuration entry.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="applicationConfigurationEntryModel">The application configuration entry model.</param>
+            <returns>The modification confirmation, or bad request error response if invalid input parameters.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.ApplicationConfigurationController.DeleteApplicationConfigurationEntry(System.Int32)">
+            <summary>
+            Deletes the application configuration entry for given id.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="applicationConfigurationEntryId">The application configuration entry identifier.</param>
+            <returns>The deletion confirmation.</returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Controllers.AssetController">
+            <summary>
+            Provides asset APIs.
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.AssetController.#ctor(AssetMonitoring.Services.IAssetService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Controllers.AssetController"/> class.
+            </summary>
+            <param name="assetService">The asset service.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.AssetController.GetAll">
+            <summary>
+            Gets all assets.
+            </summary>
+            <returns>The asset details.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.AssetController.GetAllDamageAsset">
+            <summary>
+            Gets all damage assets.
+            </summary>
+            <returns>The group asset details.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.AssetController.GetAllDamageAsset(System.Int32)">
+            <summary>
+            Gets all damage assets by group.
+            </summary>
+            <param name="groupId">The group identifier.</param>
+            <returns>
+            The group asset details.
+            </returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.AssetController.Get(System.String)">
+            <summary>
+            Gets the specified asset.
+            </summary>
+            <param name="assetBarcode">The asset barcode.</param>
+            <returns>The asset detail if found else NotFound(404) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.AssetController.Post(AssetMonitoring.Contracts.Asset)">
+            <summary>
+            Creates the specified asset.
+            </summary>
+            <param name="asset">The asset.</param>
+            <returns>The created(201) on successfully creation else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.AssetController.Delete(System.String)">
+            <summary>
+            Deletes the specified asset.
+            </summary>
+            <param name="assetBarcode">The asset barcode.</param>
+            <returns>
+            The deleted(204) on successfully deletion else BadRequest(400) status code.
+            </returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.AssetController.GetAssetStatus(System.String)">
+            <summary>
+            Gets the asset status.
+            </summary>
+            <param name="assetBarcode">The asset barcode.</param>
+            <returns>The asset status.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.AssetController.DetachAssetSensor(AssetMonitoring.Contracts.Asset)">
+            <summary>
+            Detaches the asset sensor.
+            </summary>
+            <param name="asset">The asset.</param>
+            <returns>The updated(204) on successfully detach else BadRequest(400) status code.</returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Controllers.CapabilityController">
+            <summary>
+            Provides capability APIs.
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.CapabilityController.#ctor(AssetMonitoring.Services.ICapabilityService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Controllers.CapabilityController"/> class.
+            </summary>
+            <param name="sensorCapabilityService">The sensor capability service.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.CapabilityController.GetAll">
+            <summary>
+            Gets all capabilities.
+            </summary>
+            <returns>The capability details.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.CapabilityController.GetAllSensorTypeCapabilities(System.Int32)">
+            <summary>
+            Gets all sensor type capabilities.
+            </summary>
+            <param name="sensorTypeId">The sensor type identifier.</param>
+            <returns>
+            The sensor type capabilities.
+            </returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.CapabilityController.Get(System.Int32)">
+            <summary>
+            Gets the specified capability.
+            </summary>
+            <param name="id">The capability identifier.</param>
+            <returns>The capability detail if found else NotFound(404) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.CapabilityController.Post(AssetMonitoring.Contracts.Capability)">
+            <summary>
+            Creates the specified capability.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="capability">The capability.</param>
+            <returns>The created(201) on successfully creation else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.CapabilityController.Put(System.Collections.Generic.List{AssetMonitoring.Contracts.Capability})">
+            <summary>
+            Updates the specified capabilities.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="capabilities">The capabilities collection to be update.</param>
+            <returns>
+            The updated(204) on successfully updation else BadRequest(400) status code.
+            </returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.CapabilityController.Delete(System.Int32)">
+            <summary>
+            Deletes the specified capability.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="id">The capability identifier.</param>
+            <returns>The deleted(204) on successfully deletion else BadRequest(400) status code.</returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Controllers.CapabilityFilterController">
+            <summary>
+            Provides capability filter APIs.
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.CapabilityFilterController.#ctor(AssetMonitoring.Services.ISensorCapabilityFilterService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Controllers.CapabilityFilterController"/> class.
+            </summary>
+            <param name="sensorCapabilityFilterService">The sensor capability filter service.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.CapabilityFilterController.GetAll">
+            <summary>
+            Gets all capability filters.
+            </summary>
+            <returns>The capability filter details.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.CapabilityFilterController.GetAllFilterByCapability(System.Int32)">
+            <summary>
+            Gets all filters by capability.
+            </summary>
+            <param name="capabilityId">The capability identifier.</param>
+            <returns>
+            The capability filters.
+            </returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.CapabilityFilterController.Get(System.Int32)">
+            <summary>
+            Gets the specified capability filter.
+            </summary>
+            <param name="id">The capability filter identifier.</param>
+            <returns>The capability filter detail if found else NotFound(404) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.CapabilityFilterController.Post(AssetMonitoring.Contracts.CapabilityFilter)">
+            <summary>
+            Creates the specified capability filter.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="capabilityFilter">The capability filter.</param>
+            <returns>The created(201) on successfully creation else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.CapabilityFilterController.Put(AssetMonitoring.Contracts.CapabilityFilter)">
+            <summary>
+            Updates the specified capability filter.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="capabilityFilter">The capability filter.</param>
+            <returns>The updated(204) on successfully updation else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.CapabilityFilterController.Delete(System.Int32)">
+            <summary>
+            Deletes the specified capability filter.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="id">The capability filter identifier.</param>
+            <returns>The deleted(204) on successfully deletion else BadRequest(400) status code.</returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Controllers.ConfigurationController">
+            <summary>
+            Provides configuration APIs.
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.ConfigurationController.GetMobileConfiguration">
+            <summary>
+            Gets the B2C configuration.
+            </summary>
+            <returns>The b2c configuration dictionary.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.ConfigurationController.GetSimulatorB2cConfiguration">
+            <summary>
+            Gets the simulator B2C configuration.
+            </summary>
+            <returns>The simulator configuration dictionary.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.ConfigurationController.GetSimulatorAppConfiguration">
+            <summary>
+            Gets the simulator app configuration.
+            </summary>
+            <returns>The simulator configuration dictionary.</returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Controllers.GatewayController">
+            <summary>
+            Provides gateway APIs.
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.GatewayController.#ctor(AssetMonitoring.Services.IGatewayService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Controllers.GatewayController"/> class.
+            </summary>
+            <param name="gatewayService">The gateway service.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.GatewayController.GetAll">
+            <summary>
+            Gets all gateways.
+            </summary>
+            <returns>The gateway details</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.GatewayController.GetAllOnlineGateway">
+            <summary>
+            Gets all online gateways.
+            </summary>
+            <returns>The gateway details</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.GatewayController.Get(System.Int32)">
+            <summary>
+            Gets the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>The gateway detail if found else NotFound(404) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.GatewayController.GetIotHubGateway(System.String)">
+            <summary>
+            Gets the gateway iot hub connection details.
+            </summary>
+            <param name="gatewayKey">The gateway key.</param>
+            <returns>
+            The gateway detail if found else NotFound(404) status code.
+            </returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.GatewayController.Post(AssetMonitoring.Contracts.Gateway)">
+            <summary>
+            Creates the specified gateway.
+            GatewayId must be unique and continuous string, white space not allowed in between words.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="gateway">The gateway.</param>
+            <returns>
+            The created(201) on successfully creation else BadRequest(400) status code.
+            </returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.GatewayController.Put(AssetMonitoring.Contracts.Gateway)">
+            <summary>
+            Updates the specified gateway.
+            Only name and description allowed to modify.
+            To modify GatewayId delete existing and create new.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="gateway">The gateway.</param>
+            <returns>
+            The updated(204) on successfully updation else BadRequest(400) status code.
+            </returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.GatewayController.Delete(System.Int32)">
+            <summary>
+            Deletes the specified gateway.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="id">The gateway identifier.</param>
+            <returns>The deleted(204) on successfully deletion else BadRequest(400) status code.</returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Controllers.IndoorLayoutController">
+            <summary>
+            Provides indoor layout APIs.
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.IndoorLayoutController.#ctor(AssetMonitoring.Services.IBlobStorageService,AssetMonitoring.Services.IIndoorLayoutService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Controllers.IndoorLayoutController" /> class.
+            </summary>
+            <param name="blobStorageService">The BLOB storage service.</param>
+            <param name="indoorLayoutService">The indoor layout service.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.IndoorLayoutController.Post">
+            <summary>
+            Adds the indoor layout.
+            It receive only multipart/form-data content-type.
+            Indoor layout file with any name but must be image.
+            This API is accessible to only super admin user.
+            </summary>
+            <returns>The indoor layout uploaded status.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.IndoorLayoutController.GetAllIndoorLayout">
+            <summary>
+            Get all indoor layout.
+            </summary>
+            <returns>The indoor layouts.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.IndoorLayoutController.Get(System.Int32)">
+            <summary>
+            Get the specified indoor layout.
+            </summary>
+            <param name="id">The indoor layout identifier.</param>
+            <returns>The indoor layout if found else NotFound(404) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.IndoorLayoutController.Put(AssetMonitoring.Contracts.IndoorLayout)">
+            <summary>
+            Maps gateway with indoor layout.
+            </summary>
+            <param name="indoorLayout">The indoor layout.</param>
+            <returns>The updated(204) on successfully mapping else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.IndoorLayoutController.DetachGateway(AssetMonitoring.Contracts.IndoorLayout)">
+            <summary>
+            Detach gateway with indoor layout.
+            </summary>
+            <param name="indoorLayout">The indoor layout.</param>
+            <returns>The updated(204) on successfully detaching gateway else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.IndoorLayoutController.Delete(System.Int32)">
+            <summary>
+            Deletes the specified indoor layout.
+            </summary>
+            <param name="id">The indoor layout identifier.</param>
+            <returns>The deleted(204) on successfully deletion else BadRequest(400) status code.</returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Controllers.SensorController">
+            <summary>
+            Provides sensor APIs.
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorController.#ctor(AssetMonitoring.Services.ISensorService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Controllers.SensorController"/> class.
+            </summary>
+            <param name="sensorService">The sensor service.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorController.GetAll">
+            <summary>
+            Gets all sensors.
+            </summary>
+            <returns>The sensor details.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorController.GetAllUnmappedSensors">
+            <summary>
+            Gets all unmapped sensors.
+            </summary>
+            <returns>The unmapped sensor details.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorController.GetAllSensorBySensorType(System.Int32)">
+            <summary>
+            Gets all sensors by sensor type.
+            </summary>
+            <param name="sensorTypeId">The sensor type identifier.</param>
+            <returns>
+            The sensor details.
+            </returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorController.Get(System.Int32)">
+            <summary>
+            Gets the specified sensor.
+            </summary>
+            <param name="id">The sensor identifier.</param>
+            <returns>The sensor detail if found else NotFound(404) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorController.Post(AssetMonitoring.Contracts.Sensor)">
+            <summary>
+            Creates the specified sensor.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="sensor">The sensor.</param>
+            <returns>The created(201) on successfully creation else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorController.Put(AssetMonitoring.Contracts.Sensor)">
+            <summary>
+            Updates the specified sensor.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="sensor">The sensor.</param>
+            <returns>The updated(204) on successfully updation else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorController.Delete(System.Int32)">
+            <summary>
+            Deletes the specified sensor.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="id">The sensor identifier.</param>
+            <returns>The deleted(204) on successfully deletion else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorController.GetSensorType(System.String)">
+            <summary>
+            Gets the sensor type for given sensor key.
+            </summary>
+            <param name="sensorKey">The sensor key.</param>
+            <returns>The sensor type if found else NotFound(404) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorController.BulkSensorUpload(System.Int32)">
+            <summary>
+            Adds the rooms to building.
+            It receive only multipart/form-data content-type.
+            It only accept sensor details in CSV file format.
+            Sample Format -> SensorName, SensorKey.
+            SensorKey - it must be valid string, if already exist than it's ignored.
+            SensorName - it's optional, if not specified than sensor name will same as sensor key.
+            </summary>
+            <param name="sensorTypeId">The sensor type identifier.</param>
+            <returns>The sensor added to sensor type confirmation.</returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Controllers.SensorGroupController">
+            <summary>
+            Provides sensor group APIs.
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorGroupController.#ctor(AssetMonitoring.Services.ISensorGroupService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Controllers.SensorGroupController"/> class.
+            </summary>
+            <param name="sensorGroupService">The sensor group service.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorGroupController.GetAll">
+            <summary>
+            Gets all sensor groups.
+            Returns only group details excludes sensors, rules and capability filters.
+            </summary>
+            <returns>The sensor group details.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorGroupController.Get(System.Int32)">
+            <summary>
+            Gets the specified sensor group.
+            </summary>
+            <param name="id">The sensor group identifier.</param>
+            <returns>The sensor group detail if found else NotFound(404) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorGroupController.Post(AssetMonitoring.Contracts.SensorGroup)">
+            <summary>
+            Creates the specified sensor group.
+            </summary>
+            <param name="sensorGroup">The sensor group.</param>
+            <returns>The created(201) on successfully creation else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorGroupController.Put(AssetMonitoring.Contracts.SensorGroup)">
+            <summary>
+            Updates the specified sensor group.
+            </summary>
+            <param name="sensorGroup">The sensor group.</param>
+            <returns>The updated(204) on successfully updation else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorGroupController.Delete(System.Int32)">
+            <summary>
+            Deletes the specified sensor group.
+            </summary>
+            <param name="id">The sensor group identifier.</param>
+            <returns>The deleted(204) on successfully deletion else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorGroupController.AddAsset(System.Int32,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Adds the assets to group.
+            </summary>
+            <param name="groupId">The group identifier.</param>
+            <param name="assetIds">The asset ids.</param>
+            <returns>The updated(204) on successfully updation else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorGroupController.RemoveAsset(System.Int32,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Removes the assets to group.
+            </summary>
+            <param name="groupId">The group identifier.</param>
+            <param name="assetIds">The asset ids.</param>
+            <returns>The updated(204) on successfully updation else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorGroupController.DetachSensors(System.Int32)">
+            <summary>
+            Detaches the sensors.
+            </summary>
+            <param name="groupId">The group identifier.</param>
+            <returns>
+            The updated(204) on successfully updation else BadRequest(400) status code.
+            </returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorGroupController.GetAllGroupStartEndLocation">
+            <summary>
+            Gets all group start end location.
+            </summary>
+            <returns>The group location details.</returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Controllers.SensorRuleController">
+            <summary>
+            Provide sensor rule APIs.
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorRuleController.#ctor(AssetMonitoring.Services.ISensorRuleService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Controllers.SensorRuleController"/> class.
+            </summary>
+            <param name="sensorRuleService">The sensor rule service.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorRuleController.Get(System.Int32)">
+            <summary>
+            Gets the specified sensor rule.
+            </summary>
+            <param name="id">The sensor rule identifier.</param>
+            <returns>The sensor rule detail if found else NotFound(404) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorRuleController.GetAll">
+            <summary>
+            Gets all sensor rules.
+            </summary>
+            <returns>The sensor rule details.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorRuleController.Post(System.Int32,System.Collections.Generic.List{AssetMonitoring.Contracts.SensorRule})">
+            <summary>
+            Creates the specified sensor rule.
+            </summary>
+            <param name="id">The sensor group identifier.</param>
+            <param name="sensorRules">The sensor rule.</param>
+            <returns>
+            The created(201) on successfully creation else BadRequest(400) status code.
+            </returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorRuleController.Put(AssetMonitoring.Contracts.SensorRule)">
+            <summary>
+            Updates the specified sensor rule.
+            Can not modify sensor group.
+            </summary>
+            <param name="sensorRule">The sensor rule.</param>
+            <returns>The updated(204) on successfully updation else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorRuleController.Delete(System.Int32)">
+            <summary>
+            Deletes the specified sensor rule.
+            </summary>
+            <param name="id">The sensor rule identifier.</param>
+            <returns>The deleted(204) on successfully deletion else BadRequest(400) status code.</returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Controllers.SensorTypeController">
+            <summary>
+            Provides sensor type APIs.
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorTypeController.#ctor(AssetMonitoring.Services.ISensorTypeService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Controllers.SensorTypeController"/> class.
+            </summary>
+            <param name="sensorTypeService">The sensor type service.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorTypeController.GetAll">
+            <summary>
+            Gets all sensor types.
+            </summary>
+            <returns>The sensor type details.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorTypeController.Get(System.Int32)">
+            <summary>
+            Gets the specified sensor type.
+            </summary>
+            <param name="id">The sensor type identifier.</param>
+            <returns>The sensor type detail if found else NotFound(404) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorTypeController.Post(AssetMonitoring.Contracts.SensorType)">
+            <summary>
+            Creates the specified sensor type.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="sensorType">Type of the sensor.</param>
+            <returns>The created(201) on successfully creation else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorTypeController.Put(AssetMonitoring.Contracts.SensorType)">
+            <summary>
+            Updates the specified sensor type.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="sensorType">Type of the sensor.</param>
+            <returns>The updated(204) on successfully updation else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorTypeController.Delete(System.Int32)">
+            <summary>
+            Deletes the specified sensor type.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="id">The sensor type identifier.</param>
+            <returns>The deleted(204) on successfully deletion else BadRequest(400) status code.</returns>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.SensorTypeController.SetCapabilitiesToSensorType(System.Int32,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Sets the capabilities to sensor type.
+            This API is accessible to only super admin user.
+            </summary>
+            <param name="sensorTypeId">The sensor type identifier.</param>
+            <param name="capabilityIds">The capability ids.</param>
+            <returns>The success(204) on successfully association else BadRequest(400) status code.</returns>
+        </member>
+        <member name="T:AssetMonitoring.API.Controllers.UserController">
+            <summary>
+            Provide user APIs.
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.UserController.#ctor(AssetMonitoring.Components.Context.IContextInfoProvider,AssetMonitoring.Services.IUserService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.Controllers.UserController" /> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="userService">The user service.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.Controllers.UserController.GetCurrentUser">
+            <summary>
+            Gets the Lodged-in user.
+            </summary>
+            <returns>The user detail.</returns>
+        </member>
+        <member name="T:AssetMonitoring.API.ErrorHandler.AiExceptionLogger">
+            <summary>
+             Represents an unhandled exception logger.
+            </summary>
+            <seealso cref="T:System.Web.Http.ExceptionHandling.ExceptionLogger" />
+        </member>
+        <member name="M:AssetMonitoring.API.ErrorHandler.AiExceptionLogger.#ctor(Microsoft.ApplicationInsights.TelemetryClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.ErrorHandler.AiExceptionLogger"/> class.
+            </summary>
+            <param name="telemetryClient">The telemetry client.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.ErrorHandler.AiExceptionLogger.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            Flushes the telemetry client.
+            </summary>
+        </member>
+        <member name="M:AssetMonitoring.API.ErrorHandler.AiExceptionLogger.Log(System.Web.Http.ExceptionHandling.ExceptionLoggerContext)">
+            <summary>
+            logs the exception synchronously.
+            </summary>
+            <param name="context">The exception logger context.</param>
+        </member>
+        <member name="M:AssetMonitoring.API.HttpFilters.UnitOfWorkHttpFilterAttribute.#ctor(Castle.Windsor.IWindsorContainer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AssetMonitoring.API.HttpFilters.UnitOfWorkHttpFilterAttribute" /> class.
+            </summary>
+            <param name="container">The IoC container.</param>
+        </member>
+    </members>
+</doc>

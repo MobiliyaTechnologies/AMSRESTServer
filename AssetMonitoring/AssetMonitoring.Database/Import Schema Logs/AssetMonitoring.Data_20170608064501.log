@@ -1,0 +1,93 @@
+08-06-2017 12:15:01	This log contains information about the import schema operation into project 'AssetMonitoring.Database' on computer 'AJIT-PC' by user 'ajit'.
+08-06-2017 12:15:01	Import of database schema has started.
+08-06-2017 12:15:06	Gathering error messages
+08-06-2017 12:15:06	Gathering cryptographic providers
+08-06-2017 12:15:06	Gathering credentials
+08-06-2017 12:15:06	Gathering logins
+08-06-2017 12:15:06	Gathering server roles
+08-06-2017 12:15:06	Gathering server role memberships
+08-06-2017 12:15:06	Gathering linked servers
+08-06-2017 12:15:06	Gathering linked server logins
+08-06-2017 12:15:06	Gathering routes
+08-06-2017 12:15:06	Gathering ddl triggers
+08-06-2017 12:15:06	Gathering encrypted and clr ddl triggers
+08-06-2017 12:15:06	Gathering event notifications
+08-06-2017 12:15:06	Gathering server audits
+08-06-2017 12:15:06	Gathering server audit specifications
+08-06-2017 12:15:06	Gathering event notifications
+08-06-2017 12:15:09	Gathering database options
+08-06-2017 12:15:09	Gathering users
+08-06-2017 12:15:09	Gathering roles
+08-06-2017 12:15:09	Gathering application roles
+08-06-2017 12:15:09	Gathering role memberships
+08-06-2017 12:15:09	Gathering filegroups
+08-06-2017 12:15:09	Gathering files
+08-06-2017 12:15:09	Gathering full-text catalogs
+08-06-2017 12:15:09	Gathering assemblies
+08-06-2017 12:15:09	Gathering certificates
+08-06-2017 12:15:09	Gathering asymmetric keys
+08-06-2017 12:15:09	Gathering symmetric keys
+08-06-2017 12:15:09	Gathering encrypted symmetric keys
+08-06-2017 12:15:09	Gathering database encryption keys
+08-06-2017 12:15:09	Gathering schemas
+08-06-2017 12:15:09	Gathering XML schema collections
+08-06-2017 12:15:09	Gathering user-defined data types
+08-06-2017 12:15:09	Gathering user-defined types
+08-06-2017 12:15:09	Gathering table types
+08-06-2017 12:15:09	Gathering unique keys for table types
+08-06-2017 12:15:09	Gathering primary keys for table types
+08-06-2017 12:15:09	Gathering indexes for table types
+08-06-2017 12:15:09	Gathering check constraints for table types
+08-06-2017 12:15:09	Gathering default constraints for table types
+08-06-2017 12:15:09	Gathering partition functions
+08-06-2017 12:15:09	Gathering partition schemes
+08-06-2017 12:15:09	Gathering functions
+08-06-2017 12:15:09	Gathering encrypted functions
+08-06-2017 12:15:09	Gathering aggregates
+08-06-2017 12:15:09	Gathering procedures
+08-06-2017 12:15:09	Gathering encrypted procedures
+08-06-2017 12:15:09	Gathering tables
+08-06-2017 12:15:09	Gathering primary keys
+08-06-2017 12:15:09	Gathering unique constraints
+08-06-2017 12:15:09	Gathering foreign keys
+08-06-2017 12:15:09	Gathering default constraints
+08-06-2017 12:15:09	Gathering check constraints
+08-06-2017 12:15:09	Gathering views
+08-06-2017 12:15:09	Gathering encrypted views
+08-06-2017 12:15:09	Gathering indexes
+08-06-2017 12:15:09	Gathering statistics
+08-06-2017 12:15:09	Gathering full-text index stoplists
+08-06-2017 12:15:09	Gathering search property lists
+08-06-2017 12:15:09	Gathering search properties
+08-06-2017 12:15:09	Gathering full-text indexes
+08-06-2017 12:15:09	Gathering column store indexes
+08-06-2017 12:15:09	Gathering spatial indexes
+08-06-2017 12:15:09	Gathering XML indexes
+08-06-2017 12:15:09	Gathering Selective XML indexes
+08-06-2017 12:15:09	Gathering encrypted triggers
+08-06-2017 12:15:09	Gathering triggers
+08-06-2017 12:15:09	Gathering encrypted and clr ddl triggers
+08-06-2017 12:15:09	Gathering ddl triggers
+08-06-2017 12:15:09	Gathering synonyms
+08-06-2017 12:15:09	Gathering defaults
+08-06-2017 12:15:09	Gathering data constraint uddt bindings
+08-06-2017 12:15:09	Gathering rules
+08-06-2017 12:15:09	Gathering data constraint uddt bindings
+08-06-2017 12:15:09	Gathering message types
+08-06-2017 12:15:09	Gathering queues
+08-06-2017 12:15:09	Gathering contracts
+08-06-2017 12:15:09	Gathering services
+08-06-2017 12:15:09	Gathering routes
+08-06-2017 12:15:09	Gathering event notifications
+08-06-2017 12:15:09	Gathering remote service bindings
+08-06-2017 12:15:09	Gathering broker priorities
+08-06-2017 12:15:09	Gathering database audit specifications
+08-06-2017 12:15:09	Gathering signatures
+08-06-2017 12:15:09	Gathering data compression options
+08-06-2017 12:15:09	Gathering sequence types
+08-06-2017 12:15:09	Gathering extended properties
+08-06-2017 12:15:09	Scanning project for duplicate elements
+08-06-2017 12:15:09	Finished duplicate element processing
+08-06-2017 12:15:10	Finished importing database.
+08-06-2017 12:15:10	A summary of the import was saved to the following location: D:\AssetMonitoring\REST-API-Server\AssetMonitoring\AssetMonitoring.Database\Import Schema Logs\AssetMonitoring.Data_20170608064501.log
+08-06-2017 12:15:10	Click Finish to continue...
